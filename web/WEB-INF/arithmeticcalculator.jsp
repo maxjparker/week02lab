@@ -1,6 +1,6 @@
 <%-- 
-    Document   : agecalculator
-    Created on : Sep 13, 2019, 2:38:44 PM
+    Document   : arithmeticcalculator
+    Created on : Sep 14, 2019, 3:37:12 PM
     Author     : 657306
 --%>
 
@@ -12,12 +12,12 @@
         <title>Week 2 Lab - Calculators</title>
     </head>
     <body>
-        <h1>Age Calculator!!!</h1>
+        <h1>Arithmetic Calculator!!!</h1>
         <form method="post">
             Enter your age: <input type="text" name="ageInput"><br>
             <input type="submit" value="Age next birthday">
         </form>
         <div>${curAge}</div>
-        <a href="/Week2Lab_Calculators/arithmetic">Arithmetic Calculator</a>
+        <a href="/Week2Lab_Calculators/age">Age Calculator</a>
     </body>
 </html>
