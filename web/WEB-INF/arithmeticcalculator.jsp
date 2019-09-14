@@ -14,10 +14,14 @@
     <body>
         <h1>Arithmetic Calculator!!!</h1>
         <form method="post">
-            Enter your age: <input type="text" name="ageInput"><br>
-            <input type="submit" value="Age next birthday">
+            First: <input type="text" name="n1"><br>
+            Second: <input type="text" name="n2"><br>
+            <input type="button" value="+">
+            <input type="button" value="-">
+            <input type="button" value="*">
+            <input type="button" value="%"><br>
         </form>
-        <div>${curAge}</div>
+        Result: <div>${ans}</div>
         <a href="/Week2Lab_Calculators/age">Age Calculator</a>
     </body>
 </html>
