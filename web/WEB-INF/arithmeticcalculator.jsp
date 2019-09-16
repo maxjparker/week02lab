@@ -16,12 +16,12 @@
         <form method="post">
             First: <input type="text" name="n1"><br>
             Second: <input type="text" name="n2"><br>
-            <input type="button" value="+">
-            <input type="button" value="-">
-            <input type="button" value="*">
-            <input type="button" value="%"><br>
+            <input type="submit" value="+" name="calc">
+            <input type="submit" value="-" name="calc">
+            <input type="submit" value="*" name="calc">
+            <input type="submit" value="%" name="calc"><br>
         </form>
-        Result: <div>${ans}</div>
+        <div>Result: ${ans}</div>
         <a href="/Week2Lab_Calculators/age">Age Calculator</a>
     </body>
 </html>

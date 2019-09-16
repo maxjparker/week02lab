@@ -17,6 +17,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet
             throws ServletException, IOException
     {
         //TODO: stuff
+        request.setAttribute("ans", "--");
         
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp")
                 .forward(request, response);
@@ -27,6 +28,42 @@ public class ArithmeticCalculatorServlet extends HttpServlet
             throws ServletException, IOException
     {
         //TODO: stuff
+        String pressed = request.getParameter("calc");
+        int answer = 0;
+        
+        try
+        {
+            int num1 = Integer.parseInt(request.getParameter("n1"));
+            int num2 = Integer.parseInt(request.getParameter("n2"));
+            if (null == pressed)
+            {
+                
+            }
+            else
+            {
+                switch (pressed) {
+                    case "-":
+                        answer = num1 - num2;
+                        break;
+                    case "*":
+                        answer = num1 * num2;
+                        break;
+                    case "%":
+                        answer = num1 % num2;
+                        break;
+                    case "+":
+                        answer = num1 + num2;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            request.setAttribute("ans", answer);
+        }
+        catch (NumberFormatException e)
+        {
+            request.setAttribute("ans", "Please enter 2 integer numbers");
+        }
         
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp")
                 .forward(request, response);
